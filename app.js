@@ -4,6 +4,7 @@ const app = express()
 const PORT = 3000
 
 const routes = require('./routes')
+require('./config/mongoose')
 
 app.set('view engine', 'pug')
 app.use(express.urlencoded({ extended: true }))
