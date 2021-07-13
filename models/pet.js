@@ -8,7 +8,7 @@ const petSchema = new Schema({
     type: Date,
     require: true,
     get: function dateFormat (v) {
-      return moment(v).format('YYYY/MM/DD')
+      return moment(v).format('YYYY-MM-DD')
     }
   },
   gender: { type: String, require: true },

@@ -2,6 +2,7 @@ extends main.pug
 
 block pets
   div(class="container text-white")
+    h2(class="text-dark") Your Pets
     each pet in data 
       div(class="rounded bg-dark mt-2") 
         div(class="row")
@@ -17,5 +18,39 @@ block pets
               i(class="fas fa-heartbeat")
             button(class="btn btn-dark")
               i(class="fas fa-notes-medical")
-            button(class="btn btn-dark")
+            button(class="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#"+pet.name)
               i(class="fas fa-chevron-right")
+      //- pet profile modal
+      div(class="modal fade text-dark" id=pet.name  tabindex="-1")
+        div(class="modal-dialog")
+          div(class="modal-content")
+            div(class="modal-header")
+              h5(class="modal-title") Profile
+              button(class="btn-close" type="button" data-bs-dismiss="modal")
+            div(class="modal-body")
+              div(class="mb-2")
+                img(src=pet.avatar alt="" class="rounded-circle" style="width: 150px; height: 150px; object-fit:cover")
+
+              label(class="form-label" for="name") Name
+              input(class="form-control" type="text" id="name" name="name" value=pet.name readonly)
+
+              label(class="form-label" for="dob") Date of Birth
+              input(class="form-control" type="date" id="dob" name="dob" value=pet.dob readonly)
+
+              label(class="form-label" for="gender") Gender
+              select(class="form-select" name="gender")
+                option(value="male" selected= pet.gender == 'male') Male 
+                option(value="female" selected= pet.gender == 'female') Female
+
+              label(class="form-label" for="species") Species
+              input(class="form-control" type="text" id="species" name="species" value=pet.species readonly)
+
+              label(class="form-label" for="breed") Breed
+              input(class="form-control" type="text" id="breed" name="breed" value=pet.breed readonly)
+
+              label(class="form-label" for="note") Note
+              textarea(class="form-control" type="text" id="note" name="note" readonly)=pet.note
+
+            div(class="modal-footer")
+              button(class="btn btn-secondary" type="button" data-bs-dismiss="modal") Close 
+              button(class="btn btn-primary") Save
