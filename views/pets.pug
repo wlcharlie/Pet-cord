@@ -1,4 +1,20 @@
 extends main.pug
 
 block pets
-  h1 123
+  div(class="container text-white")
+    div(class="rounded bg-dark mt-2") 
+      div(class="row")
+        div(class="col-4 col-md-2 col-lg-2")
+          img(class="img-fluid" src="https://cdn2.thecatapi.com/images/3p6.jpg", alt="")
+        div(class="col-4 col-md-3 col-lg-4")
+          h4 Meow
+          h6 2 years
+        div(class="col-4 col-md-3 col-lg-3")
+          h5 Latest Activity
+        div(class="col-12 col-md-4 col-lg-3 btn-group")
+          button(class="btn btn-dark")
+            i(class="fas fa-heartbeat")
+          button(class="btn btn-dark")
+            i(class="fas fa-heartbeat")
+          button(class="btn btn-dark")
+            i(class="fas fa-heartbeat")
