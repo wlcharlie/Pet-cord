@@ -5,6 +5,10 @@ const petsService = {
     return await Pet.find({})
   },
 
+  addPet: async (data) => {
+    return await Pet.create(data)
+  },
+
   updatePet: async (data) => {
     return await Pet.findByIdAndUpdate(data.pet.id, data.info)
   }

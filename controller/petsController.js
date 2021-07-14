@@ -10,6 +10,18 @@ const petsController = {
     }
   },
 
+  addPet: async (req, res, next) => {
+    try {
+      const newData = {
+        ...req.body
+      }
+      await petsService.addPet(newData)
+      return res.redirect('/pets')
+    } catch (error) {
+      next(error)
+    }
+  },
+
   updatePet: async (req, res, next) => {
     try {
       const updateData = {
