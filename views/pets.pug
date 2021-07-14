@@ -45,7 +45,7 @@ block pets
                       form(action=`/pets/${pet._id}?_method=DELETE` method="POST" class="d-flex")
                         input(class="form-control" type="text" name="name" pattern=pet.name placeholder=`type ${pet.name} to delete`)
                         button(class="btn btn-light text-danger ms-1" type="submit") BYE!
-            form(class="modal-content" action=`/pets/${pet._id}?_method=PUT` method="POST")
+            form(action=`/pets/${pet._id}?_method=PUT` method="POST")
               div(class="modal-body" id=pet._id)
                 div(class="mb-2")
                   img(src=pet.avatar alt="" class="rounded-circle d-flex mx-auto" style="width: 150px; height: 150px; object-fit:cover")
