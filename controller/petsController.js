@@ -33,6 +33,19 @@ const petsController = {
     } catch (error) {
       next(error)
     }
+  },
+
+  deletePet: async (req, res, next) => {
+    const deleteData = {
+      _id: req.params.petId,
+      ...req.body
+    }
+    try {
+      await petsService.deletePet(deleteData)
+      return res.redirect('/pets')
+    } catch (error) {
+      next(error)
+    }
   }
 }
 

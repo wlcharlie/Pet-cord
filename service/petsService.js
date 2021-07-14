@@ -11,8 +11,11 @@ const petsService = {
 
   updatePet: async (data) => {
     return await Pet.findByIdAndUpdate(data.pet.id, data.info)
-  }
+  },
 
+  deletePet: async (data) => {
+    return await Pet.findOneAndDelete(data)
+  }
 }
 
 module.exports = petsService
