@@ -8,6 +8,19 @@ const petsController = {
     } catch (error) {
       next(error)
     }
+  },
+
+  updatePet: async (req, res, next) => {
+    try {
+      const updateData = {
+        pet: { id: req.params.petId },
+        info: { ...req.body }
+      }
+      await petsService.updatePet(updateData)
+      return res.redirect('/pets')
+    } catch (error) {
+      next(error)
+    }
   }
 }
 
