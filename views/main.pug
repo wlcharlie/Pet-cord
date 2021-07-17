@@ -4,11 +4,54 @@ html
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet")
     link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous")
+    style(type='text/css').
+      :root{
+        --dark: #2F3637;
+        --blue: #4A90CE;
+        --red: #FF6952;
+        --green: #BAAC6D;
+        --dark-green: #779362;
+        --light: #CEC191;
+        --background: #F0EAB9
+      }
+
+      body {
+        font-family: 'PT Sans', sans-serif;
+        font-family: 'Noto Sans TC', sans-serif;
+      }
+
+      .dark {
+        background-color: var(--dark)
+      }
+      .light  {
+        background-color: var(--light)
+      }
+      .blue {
+        background-color: var(--blue)
+      }
+      .red {
+        background-color: var(--red)
+      }
+      .green {
+        background-color: var(--green)
+      }
+      .dark-green {
+        background-color: var(--dark-green)
+      }
+      .background {
+        background-color: var(--background)
+      }
+      .btn-success, .btn-danger {
+        border: none
+      }
     title Pet-cord
-  body
+  body(class="background")
     header 
-      nav(class="navbar navbar-dark bg-dark")
+      nav(class="navbar navbar-dark dark")
         div
           button(class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse")
             i(class="fas fa-paw")
