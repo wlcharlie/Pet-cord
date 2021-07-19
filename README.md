@@ -6,7 +6,7 @@
 
 ![image](https://i.imgur.com/ZSiRaF6.png)
 
-![image](https://i.imgur.com/XDxXDHn.png)
+<img src="https://i.imgur.com/XDxXDHn.png" alt="" width="250"/>
 
 ### 功能
 
