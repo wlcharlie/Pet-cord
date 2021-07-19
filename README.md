@@ -4,9 +4,13 @@
 
 ### 開發狀態：仍在努力開發中
 
+![image] (https://i.imgur.com/ZSiRaF6.png)
+![image] (https://i.imgur.com/XDxXDHn.png)
+
 ### 功能
 
 * 使用者可CRUD寵物
+* GRID RWD排版
 
 ### 等待實現的功能
 
