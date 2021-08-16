@@ -1,15 +1,17 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose")
 
-mongoose.connect('mongodb://localhost/pet-cord', {
+const MONGODB_URI = process.env.MONGODB_URI || " mongodb://localhost/pet-cord"
+
+mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
-  useCreateIndex: true
+  useCreateIndex: true,
 })
 
 const db = mongoose.connection
 
-db.on('error', () => console.log('Ooooops, something wrong with mongodb...'))
-db.once('open', () => console.log('mongodb connected!'))
+db.on("error", () => console.log("Ooooops, something wrong with mongodb..."))
+db.once("open", () => console.log("mongodb connected!"))
 
 module.exports = db
