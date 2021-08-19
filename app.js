@@ -7,7 +7,7 @@ const methodOverride = require("method-override")
 
 const app = express()
 const PORT = process.env.PORT || 3000
-const cors = requite("./config/cors")
+const cors = require("./config/cors")
 
 const routes = require("./routes")
 require("./config/mongoose")
