@@ -1,21 +1,24 @@
-const Pet = require('../models/pet')
+const Pet = require("../models/pet")
 
 const petsService = {
   getPets: async () => {
-    return await Pet.find({})
+    return await Pet.find({}).lean()
   },
 
-  addPet: async (data) => {
-    return await Pet.create(data)
+  addPet: async data => {
+    await Pet.create(data)
+    return { status: "success", message: "a new pet data has created" }
   },
 
-  updatePet: async (data) => {
-    return await Pet.findByIdAndUpdate(data.pet.id, data.info)
+  updatePet: async data => {
+    await Pet.findByIdAndUpdate(data.pet.id, data.info)
+    return { status: "success", message: "a pet data has updated" }
   },
 
-  deletePet: async (data) => {
-    return await Pet.findOneAndDelete(data)
-  }
+  deletePet: async data => {
+    await Pet.findOneAndDelete(data)
+    return { status: "success", message: "a pet data has deleted" }
+  },
 }
 
 module.exports = petsService

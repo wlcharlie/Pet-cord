@@ -5,7 +5,6 @@
       "dob": "2021-2-22",
       "gender": "male",
       "species": "Cat",
-      "breed": "Mixed",
       "note": "愛吃不吃",
       "avatar": "https://cdn2.thecatapi.com/images/3p6.jpg"
     },
@@ -14,7 +13,6 @@
       "dob": "2018-4-22",
       "gender": "female",
       "species": "Dog",
-      "breed": "Shiba",
       "note": "很胖",
       "avatar": "https://cdn2.thecatapi.com/images/akq.jpg"
     },
@@ -23,7 +21,6 @@
       "dob": "2020-5-8",
       "gender": "male",
       "species": "Cat",
-      "breed": "Abyssinian",
       "note": "不喜歡喝水",
       "avatar": "https://cdn2.thecatapi.com/images/dto.jpg"
     },
@@ -32,7 +29,6 @@
       "dob": "2020-5-8",
       "gender": "male",
       "species": "Cat",
-      "breed": "Bombay",
       "note": "搗蛋、愛吃",
       "avatar": "https://cdn2.thecatapi.com/images/alr.jpg"
     },
@@ -41,7 +37,6 @@
       "dob": "2020-5-8",
       "gender": "male",
       "species": "Cat",
-      "breed": "Mixed",
       "note": "調皮",
       "avatar": "https://cdn2.thecatapi.com/images/3cr.jpg"
     }
