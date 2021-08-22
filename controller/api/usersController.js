@@ -4,7 +4,7 @@ const imgur = require("../../utils/imgur")
 const usersController = {
   getUser: async (req, res, next) => {
     try {
-      const data = await usersService(req.body)
+      const data = await usersService(req.params)
       return res.json(data)
     } catch (err) {
       next(err)
