@@ -4,7 +4,7 @@ const imgur = require("../../utils/imgur")
 const usersController = {
   getUser: async (req, res, next) => {
     try {
-      const data = await usersService(req.params)
+      const data = await usersService.getUser(req.params)
       return res.json(data)
     } catch (err) {
       next(err)
@@ -13,7 +13,7 @@ const usersController = {
 
   addUser: async (req, res, next) => {
     try {
-      const data = await usersService(req.body)
+      const data = await usersService.addUser(req.body)
       return res.json(data)
     } catch (err) {
       next(err)
