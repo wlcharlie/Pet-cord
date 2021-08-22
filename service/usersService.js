@@ -2,7 +2,7 @@ const User = require("../models/user")
 
 const usersService = {
   getUser: async ({ UID }) => {
-    return await User.find({ UID }).lean()
+    return await User.findOne({ UID }).lean()
   },
 
   addUser: async data => {
