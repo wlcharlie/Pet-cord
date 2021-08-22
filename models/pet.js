@@ -1,6 +1,5 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
-const moment = require("moment")
 
 const petSchema = new Schema(
   {
