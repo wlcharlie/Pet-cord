@@ -6,8 +6,8 @@ const usersService = {
   },
 
   addUser: async data => {
-    await User.create(data)
-    return { status: "success", message: "a new user data has created" }
+    return await User.create(data).lean()
+    // return { status: "success", message: "a new user data has created" }
   },
 
   updateUser: async () => {},
