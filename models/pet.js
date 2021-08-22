@@ -10,6 +10,12 @@ const petSchema = new Schema(
     breed: { type: String, require: true },
     note: { type: String, require: true },
     avatar: { type: String, require: true },
+    UserId: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      index: true,
+      require: true,
+    },
   },
   {
     toJSON: { getters: true },
