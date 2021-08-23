@@ -4,7 +4,7 @@ const imgur = require("../../utils/imgur")
 const petsController = {
   getPets: async (req, res, next) => {
     try {
-      const data = await petsService.getPets()
+      const data = await petsService.getPets(req.params.userId)
       return res.json(data)
     } catch (error) {
       next(error)
@@ -17,7 +17,6 @@ const petsController = {
       const avatar = await imgur(file.path)
       req.body.avatar = avatar
     }
-    console.log(req.body, file)
 
     try {
       const newData = {

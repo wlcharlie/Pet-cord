@@ -1,8 +1,8 @@
 const Pet = require("../models/pet")
 
 const petsService = {
-  getPets: async () => {
-    return await Pet.find({}).populate("UserId").lean()
+  getPets: async UserId => {
+    return await Pet.find({ UserId }).populate("UserId").lean()
   },
 
   addPet: async data => {
