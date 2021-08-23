@@ -17,6 +17,7 @@ const petsController = {
       const avatar = await imgur(file.path)
       req.body.avatar = avatar
     }
+    console.log(req.body, file)
 
     try {
       const newData = {
