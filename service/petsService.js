@@ -5,8 +5,8 @@ const petsService = {
     return await Pet.find({ UserId }).populate("UserId").lean()
   },
 
-  getPet: async petId => {
-    return await Pet.findById(petId).populate("UserId").lean()
+  getPet: async ({ UserId, petId }) => {
+    return await Pet.findOne({ _id: petId, UserId }).populate("UserId").lean()
   },
 
   addPet: async data => {

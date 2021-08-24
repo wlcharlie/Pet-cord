@@ -13,7 +13,10 @@ const petsController = {
 
   getPet: async (req, res, next) => {
     try {
-      const data = await petsService.getPet(req.params.petId)
+      const data = await petsService.getPet({
+        petId: req.params.petId,
+        UserId: req.params.userId,
+      })
       return res.json(data)
     } catch (error) {
       next(error)
