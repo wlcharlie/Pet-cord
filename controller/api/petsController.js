@@ -11,6 +11,15 @@ const petsController = {
     }
   },
 
+  getPet: async (req, res, next) => {
+    try {
+      const data = await petsService.getPet(req.params.petId)
+      return res.json(data)
+    } catch (error) {
+      next(error)
+    }
+  },
+
   addPet: async (req, res, next) => {
     const { file } = req
     if (file) {

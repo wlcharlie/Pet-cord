@@ -5,6 +5,10 @@ const petsService = {
     return await Pet.find({ UserId }).populate("UserId").lean()
   },
 
+  getPet: async petId => {
+    return await Pet.findById(petId).populate("UserId").lean()
+  },
+
   addPet: async data => {
     await Pet.create(data)
     return { status: "success", message: "a new pet data has created" }
