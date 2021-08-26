@@ -16,8 +16,8 @@ const healthsService = {
     ])
   },
 
-  getPetHealth: async data => {
-    return await Health.find({ data }).limit(14).populate("PetId").lean()
+  getPetHealth: async PetId => {
+    return await Health.find({ PetId }).limit(14).populate("PetId").lean()
   },
 
   getOneHealth: async data => {

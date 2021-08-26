@@ -12,9 +12,7 @@ const healthsController = {
 
   getPetHealth: async (req, res, next) => {
     try {
-      const data = await healthsService.getPetHealth({
-        PetId: req.params.petID,
-      })
+      const data = await healthsService.getPetHealth(req.params.petID)
       return res.json(data)
     } catch (error) {
       next(error)
