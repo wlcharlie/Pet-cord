@@ -5,12 +5,12 @@ const healthSchema = new Schema(
   {
     date: { type: Number, required: true },
     weight: { type: Number, required: true },
-    water: { type: Number },
-    food: { type: Number },
+    water: { type: Number, default: 0 },
+    food: { type: Number, default: 0 },
     med: { type: Boolean },
     poo: { type: Boolean },
-    other: { type: String },
-    image: { type: Array },
+    other: { type: String, default: "" },
+    image: { type: Array, default: [] },
     PetId: {
       type: Schema.Types.ObjectId,
       ref: "Pet",
