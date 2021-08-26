@@ -3,8 +3,8 @@ const Schema = mongoose.Schema
 
 const healthSchema = new Schema(
   {
-    date: { type: Number, require: true },
-    weight: { type: Number, require: true },
+    date: { type: Number, required: true },
+    weight: { type: Number, required: true },
     water: { type: Number },
     food: { type: Number },
     med: { type: Boolean },

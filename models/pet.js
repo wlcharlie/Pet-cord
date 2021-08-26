@@ -3,13 +3,13 @@ const Schema = mongoose.Schema
 
 const petSchema = new Schema(
   {
-    name: { type: String, require: true },
-    dob: { type: Number, require: true },
-    gender: { type: String, require: true },
-    species: { type: String, require: true },
-    breed: { type: String, require: true },
-    note: { type: String, require: true },
-    avatar: { type: String, require: true },
+    name: { type: String, required: true },
+    dob: { type: Number, required: true },
+    gender: { type: String, required: true },
+    species: { type: String, required: true },
+    breed: { type: String, required: true },
+    note: { type: String, required: true },
+    avatar: { type: String, required: true },
     UserId: {
       type: Schema.Types.ObjectId,
       ref: "User",

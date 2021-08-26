@@ -3,10 +3,10 @@ const Schema = mongoose.Schema
 
 const userSchema = new Schema(
   {
-    name: { type: String, require: true },
-    UID: { type: String, requite: true },
-    email: { type: String, requite: true },
-    avatar: { type: String, requite: true },
+    name: { type: String, required: true },
+    UID: { type: String, requited: true },
+    email: { type: String, requited: true },
+    avatar: { type: String, requited: true },
   },
   {
     toJSON: { getters: true },
