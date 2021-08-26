@@ -34,16 +34,19 @@ const healthsController = {
   },
 
   addHealth: async (req, res, next) => {
+    const PetId = req.params.petId
     const { file } = req
     if (file) {
       const image = await imgur(file.path)
       req.body.image = [image]
     }
+    console.log(req.body)
 
     try {
       const newData = {
         ...req.body,
         date: new Date(req.body.date) / 1000,
+        PetId,
       }
       const data = await healthsService.addHealth(newData)
       return res.json(data)
