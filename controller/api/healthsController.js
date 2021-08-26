@@ -40,8 +40,6 @@ const healthsController = {
       const image = await imgur(file.path)
       req.body.image = [image]
     }
-    console.log(req.body)
-
     try {
       const newData = {
         ...req.body,
