@@ -3,17 +3,24 @@ const Pet = require("../models/pet")
 
 const healthsService = {
   getPetsOverviewHealths: async () => {
-    return await Pet.aggregate([
-      {
-        $lookup: {
-          from: "Health",
-          localField: "Pet._id",
-          foreignField: "Health.PetId",
-          as: "HealthRecord",
-          // pipeline: [{ $sort: "Health.date" }, { $limit: 2 }],
-        },
-      },
-    ])
+    return await Pet.aggregate.lookup({
+      from: "Health",
+      localField: "records",
+      foreignField: "_id",
+      as: "records",
+    })
+
+    // return await Pet.aggregate([
+    //   {
+    //     $lookup: {
+    //       from: "Health",
+    //       localField: "Pet._id",
+    //       foreignField: "Health.PetId",
+    //       as: "HealthRecord",
+    //       // pipeline: [{ $sort: "Health.date" }, { $limit: 2 }],
+    //     },
+    //   },
+    // ])
   },
 
   getPetHealth: async PetId => {
