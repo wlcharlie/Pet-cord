@@ -10,9 +10,15 @@ const healthsService = {
           let: {
             PetId: "$_id",
           },
-          pipelines: [
+          pipeline: [
             {
               $match: { $expr: { $eq: ["$PetId", "$$PetId"] } },
+            },
+            {
+              $sort: { date: -1 },
+            },
+            {
+              $limit: 2,
             },
           ],
           as: "records",
