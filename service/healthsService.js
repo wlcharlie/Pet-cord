@@ -11,10 +11,22 @@ const healthsService = {
           foreignField: 'ObjectId("PetId")',
           as: "records",
         },
-        $sort: { "health.date": "desc" },
-        $limit: 2,
+      },
+      {
+        $sort: { records: "desc" },
       },
     ])
+
+    // return await Pet.aggregate([
+    //   {
+    //     $lookup: {
+    //       from: "health",
+    //       localField: 'ObjectId("pets._id")',
+    //       foreignField: 'ObjectId("PetId")',
+    //       as: "records",
+    //     },
+    //   },
+    // ])
   },
 
   getPetHealth: async PetId => {
