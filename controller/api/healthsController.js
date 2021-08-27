@@ -76,7 +76,7 @@ const healthsController = {
   deleteHealth: async (req, res, next) => {
     const deleteData = {
       _id: req.params.healthId,
-      ...req.body,
+      PetId: req.params.petId,
     }
     try {
       const data = healthsService.deleteHealth(deleteData)
