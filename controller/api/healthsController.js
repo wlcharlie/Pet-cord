@@ -4,7 +4,8 @@ const healthsService = require("../../service/healthsService")
 const healthsController = {
   getPetsOverviewHealths: async (req, res, next) => {
     try {
-      return await healthsService.getPetsOverviewHealths()
+      const data = await healthsService.getPetsOverviewHealths()
+      return res.json(data)
     } catch (error) {
       next(error)
     }
