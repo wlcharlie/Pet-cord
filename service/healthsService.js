@@ -7,8 +7,8 @@ const healthsService = {
       {
         $lookup: {
           from: "health",
-          localField: "pets._id",
-          foreignField: "PetId",
+          localField: { $toString: "pets._id" },
+          foreignField: { $toString: "PetId" },
           as: "records",
         },
       },
