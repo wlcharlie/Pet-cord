@@ -9,9 +9,10 @@ const healthsService = {
           from: "health",
           localField: 'ObjectId("pets._id")',
           foreignField: 'ObjectId("PetId")',
-          pipeline: [{ $sort: { date: "desc" } }, { $limit: 2 }],
           as: "records",
         },
+        $sort: { "health.date": "desc" },
+        $limit: 2,
       },
     ])
   },
