@@ -8,10 +8,7 @@ const healthsService = {
         $lookup: {
           from: "health",
           as: "health",
-          let: {
-            PetId: "$_id",
-          },
-          pipeline: [{ $match: { $expr: { $eq: ["$PetId", "$$PetId"] } } }],
+          pipeline: [{ $match: { $expr: { $eq: ["$PetId", "$$_id"] } } }],
         },
       },
     ])
