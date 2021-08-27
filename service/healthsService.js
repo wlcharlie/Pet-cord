@@ -10,7 +10,7 @@ const healthsService = {
           localField: "Pet._id",
           foreignField: "Health.PetId",
           as: "HealthRecord",
-          pipeline: [{ $sort: "Health.date" }, { $limit: 2 }],
+          // pipeline: [{ $sort: "Health.date" }, { $limit: 2 }],
         },
       },
     ])
@@ -19,7 +19,7 @@ const healthsService = {
   getPetHealth: async PetId => {
     return await Health.find({ PetId })
       .limit(14)
-      .sort("date asc")
+      .sort("date desc")
       .populate("PetId")
       .lean()
   },
