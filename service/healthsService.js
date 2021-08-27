@@ -7,11 +7,9 @@ const healthsService = {
       {
         $lookup: {
           from: "health",
-          as: "health",
-          let: {
-            PetId: "$PetId",
-          },
-          pipeline: [{ $match: { $expr: { $eq: ["$PetId", "$$PetId"] } } }],
+          localField: "pet._id",
+          foreignField: "PetId",
+          as: "records",
         },
       },
     ])
