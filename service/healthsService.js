@@ -9,9 +9,9 @@ const healthsService = {
           from: "health",
           as: "health",
           let: {
-            pets_id: "$_id",
+            PetId: "$_id",
           },
-          pipeline: [{ $match: { $expr: { $eq: ["$pet_id", "$$pet_id"] } } }],
+          pipeline: [{ $match: { $expr: { $eq: ["$PetId", "$$PetId"] } } }],
         },
       },
     ])
