@@ -13,7 +13,7 @@ const healthsService = {
         },
       },
       {
-        $sort: { records: "desc" },
+        $sort: { "records.date": "desc" },
       },
     ])
 
