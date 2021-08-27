@@ -7,24 +7,12 @@ const healthsService = {
       {
         $lookup: {
           from: "health",
-          localField: "pet._id",
+          localField: "pets._id",
           foreignField: "PetId",
           as: "records",
         },
       },
     ])
-
-    // return await Pet.aggregate([
-    //   {
-    //     $lookup: {
-    //       from: "Health",
-    //       localField: "Pet._id",
-    //       foreignField: "Health.PetId",
-    //       as: "HealthRecord",
-    //       // pipeline: [{ $sort: "Health.date" }, { $limit: 2 }],
-    //     },
-    //   },
-    // ])
   },
 
   getPetHealth: async PetId => {
