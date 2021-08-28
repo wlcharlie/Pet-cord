@@ -19,6 +19,18 @@ const usersController = {
       next(err)
     }
   },
+
+  putUser: async (req, res, next) => {
+    try {
+      const data = await usersService.putUser({
+        UID: req.params.UID,
+        update: req.body,
+      })
+      return res.json(data)
+    } catch (err) {
+      next(err)
+    }
+  },
 }
 
 module.exports = usersController

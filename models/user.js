@@ -4,9 +4,9 @@ const Schema = mongoose.Schema
 const userSchema = new Schema(
   {
     name: { type: String, required: true },
-    UID: { type: String, requited: true },
-    email: { type: String, requited: true },
-    avatar: { type: String, requited: true },
+    UID: { type: String, required: true },
+    email: { type: String, required: true },
+    avatar: { type: String, required: true },
   },
   {
     toJSON: { getters: true },

@@ -10,9 +10,11 @@ const usersService = {
     // return { status: "success", message: "a new user data has created" }
   },
 
-  updateUser: async () => {},
+  updateUser: async ({ UID, update }) => {
+    return await User.findOneAndUpdate({ UID }, update)
+  },
 
-  deleteUser: async () => {},
+  // deleteUser: async () => {},
 }
 
 module.exports = usersService
