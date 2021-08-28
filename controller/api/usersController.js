@@ -26,7 +26,7 @@ const usersController = {
       const avatar = await imgur(file.path)
       req.body.avatar = avatar
     }
-
+    console.log(req.body)
     try {
       const data = await usersService.putUser({
         id: req.params.id,
