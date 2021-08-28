@@ -7,7 +7,7 @@ const petSchema = new Schema(
     dob: { type: Number, required: true },
     gender: { type: String, required: true },
     species: { type: String, required: true },
-    note: { type: String, required: true },
+    note: { type: String },
     avatar: { type: String, required: true },
     UserId: {
       type: Schema.Types.ObjectId,
