@@ -21,8 +21,12 @@ const usersController = {
   },
 
   putUser: async (req, res, next) => {
-    console.log(req.body)
-    console.log(req.params)
+    const { file } = req
+    if (file) {
+      const avatar = await imgur(file.path)
+      req.body.avatar = avatar
+    }
+
     try {
       const data = await usersService.putUser({
         id: req.params.id,
