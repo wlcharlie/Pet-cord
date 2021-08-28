@@ -8,6 +8,6 @@ const usersController = require("../../controller/api/usersController")
 
 router.get("/:UID", usersController.getUser)
 router.post("/", usersController.addUser)
-router.put("/:UID", usersController.putUser)
+router.put("/:id", usersController.putUser)
 
 module.exports = router

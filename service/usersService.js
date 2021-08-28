@@ -10,8 +10,8 @@ const usersService = {
     // return { status: "success", message: "a new user data has created" }
   },
 
-  updateUser: async ({ UID, update }) => {
-    return await User.findOneAndUpdate({ UID }, update)
+  updateUser: async ({ id, update }) => {
+    return await User.findByIdAndUpdate(id, update)
   },
 
   // deleteUser: async () => {},

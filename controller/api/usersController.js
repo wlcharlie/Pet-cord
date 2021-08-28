@@ -23,7 +23,7 @@ const usersController = {
   putUser: async (req, res, next) => {
     try {
       const data = await usersService.putUser({
-        UID: req.params.UID,
+        id: req.params.id,
         update: req.body,
       })
       return res.json(data)
