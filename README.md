@@ -1,24 +1,118 @@
-# Pet-cord 寵物小管家
+# PetCord | Your Pets Health Tracker
 
-紀錄寵物健康、飲食、就醫紀錄
+> This is a back-end repo, for front-end please [click here](https://github.com/wlcharlie/React-pet-cord)
 
-### 開發狀態：仍在努力開發中 (衝刺React中)
+<img src="./public/img/image8.png">
 
-![image](https://i.imgur.com/ZSiRaF6.png)
+PetCord is a pets health tracker where you can create your own account to store your pets information, note their every detail, and record their daily health status even with a nice picture.
 
-<img src="https://i.imgur.com/XDxXDHn.png" alt="" width="250"/>
+You got a pet need to take care? No problem!
 
-### 功能
+:fire: Give it a try: https://pet-cord.web.app/
 
-* 使用者可CRUD寵物
-* GRID RWD排版
+You can also login with example account to take a look
 
-### 等待實現的功能
+```
+example@example.com
+12345678
+```
 
-* 以React處理畫面
-* 登入功能
-* 紀錄健康資訊
-* 健康統計圖表
+# Index
 
-### 關於我
-Charlie (E-mail: wl00606352@gmail.com)
+- [Intro](#Intro)
+- [More Pictures](#more-pictures)
+- [Features](#Features)
+- [Tech & Package](#tech-&-package)
+- [Contributors](#contributors)
+
+# Intro
+
+PetCord is self-side-project which develop with separation of front-end and back-end.
+
+# More pictures
+
+<img src="./public/img/image7.png" width="800">
+
+<img src="./public/img/image6.png" width="500">
+
+# Features
+
+## User
+
+### Login/Account
+
+- Create an account with email
+- Auth by firebase
+- Edit user profile information
+- Avatar
+
+### Actions
+
+- Overview all the pets
+- Manage/Edit the pets information
+- Track all pets health records
+
+## Pets
+
+### Profile
+
+- Add/Edit every pets profile
+- Note with Detail
+- Avatar
+
+### Health
+
+- Add Health Record
+- Record with Image
+- Overview with the latest two records with compare
+
+## Image/Avatar
+
+- using Imgur API
+
+# Tech & Package
+
+## Front-End
+
+Create-react-app with chakra-ui
+
+- React
+- React icon
+- Chakra UI
+- Redux / Redux-toolkit
+- React Router
+- Framer
+- Firebase Hosting
+
+## Back-End
+
+:arrow_right: [Back-end Repo](https://github.com/wlcharlie/Pet-cord)
+
+### Env
+
+- Node.js
+- Express
+- Multer
+- Mongoose (for db)
+
+### DateBase
+
+- MongoDB
+- Imgur (for image/avatar)
+
+### Auth
+
+- Firebase Auth
+
+### Deploy
+
+- Heroku
+- Atlas(MongoDB)
+
+# Contributors
+
+[Charlie](https://github.com/wlcharlie/wlcharlie)
+
+Feel free to contact me if there is some buggy
+
+:email: wl00606352@gmail.com
