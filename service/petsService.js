@@ -10,8 +10,8 @@ const petsService = {
   },
 
   addPet: async data => {
-    await Pet.create(data)
-    return { status: "success", message: "a new pet data has created" }
+    return await Pet.create(data)
+    // return { status: "success", message: "a new pet data has created" }
   },
 
   updatePet: async data => {
